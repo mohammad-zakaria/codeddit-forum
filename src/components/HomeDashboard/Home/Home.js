@@ -1,12 +1,21 @@
 import React from 'react';
-import Dashboard from '../Dashboard/Dashboard';
+import ForumHome from '../ForumHome/ForumHome';
 import Navbar from '../Header/Navbar/Navbar';
+import data from "../data/data.json"
 
 const Home = () => {
+
+    const sticky = {
+        position: "-webkit-sticky",
+        position: "sticky",
+        top: 0,
+        padding: "5px"
+      }
     return (
+
         <div>
-            <Navbar></Navbar>
-            <Dashboard></Dashboard>
+            <div style={sticky} ><Navbar></Navbar></div>
+            <div><ForumHome data = {data}></ForumHome></div>
         
         </div>
     );
